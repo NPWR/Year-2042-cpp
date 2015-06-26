@@ -15,6 +15,7 @@ int main()
     Scene WORLD;
     WORLD.newCamera();
     WORLD.newBackground(10,15);
+    WORLD.getCam()->addMov(300,300);
 
     while (app.isOpen())
     {
@@ -27,6 +28,7 @@ int main()
             }
         }
     app.clear();
+    WORLD.actuate();
     WORLD.draw(&app);
     app.display();
     }

@@ -38,3 +38,9 @@ void Scene::draw(sf::RenderWindow* app)
     sf::Vector2f campos(m_cam->getPos());
     m_bg->draw(app, campos);
 }
+
+void Scene::actuate()
+{
+    m_cam->actuate();
+}
+

@@ -16,6 +16,7 @@ class Scene
         Camera *getCam();
         void newBackground(int,int);
         void draw(sf::RenderWindow*);
+        void actuate();
 
     protected:
     private:
