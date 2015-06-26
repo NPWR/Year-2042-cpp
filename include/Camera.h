@@ -4,7 +4,7 @@
 #include <Moveable.h>
 
 
-class Camera : protected Moveable
+class Camera : public Moveable
 {
     public:
         Camera();

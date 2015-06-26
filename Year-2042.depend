@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1435251919 source:c:\users\elliot\documents\softs\prog\c++\year-2042\main.cpp
+1435337651 source:c:\users\elliot\documents\softs\prog\c++\year-2042\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
-	"Camera.h"
+	<cstdlib>
+	"Scene.h"
 
 1434276333 c:\users\elliot\documents\softs\prog\c++\year-2042\bin\debug\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -382,12 +383,33 @@
 	<string>
 	<vector>
 
-1435251911 c:\users\elliot\documents\softs\prog\c++\year-2042\include\moveable.h
+1435317941 c:\users\elliot\documents\softs\prog\c++\year-2042\include\moveable.h
 	<SFML/Graphics.hpp>
 
-1435251757 source:c:\users\elliot\documents\softs\prog\c++\year-2042\src\moveable.cpp
+1435318011 source:c:\users\elliot\documents\softs\prog\c++\year-2042\src\moveable.cpp
 	"Moveable.h"
 
-1435251894 c:\users\elliot\documents\softs\prog\c++\year-2042\include\camera.h
+1435318150 c:\users\elliot\documents\softs\prog\c++\year-2042\include\camera.h
 	<Moveable.h>
+
+1435316830 source:c:\users\elliot\documents\softs\prog\c++\year-2042\src\camera.cpp
+	"Camera.h"
+	"Moveable.h"
+
+1435338001 c:\users\elliot\documents\softs\prog\c++\year-2042\include\scene.h
+	"Camera.h"
+	"Background.h"
+	<SFML/Graphics.hpp>
+
+1435337945 source:c:\users\elliot\documents\softs\prog\c++\year-2042\src\scene.cpp
+	"Scene.h"
+	"Camera.h"
+
+1435337448 c:\users\elliot\documents\softs\prog\c++\year-2042\include\background.h
+	<SFML/Graphics.hpp>
+
+1435337699 source:c:\users\elliot\documents\softs\prog\c++\year-2042\src\background.cpp
+	<SFML/Graphics.hpp>
+	"Background.h"
+	<random>
 

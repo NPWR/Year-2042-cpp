@@ -1,8 +1,9 @@
 #include "Camera.h"
+#include "Moveable.h"
 
-Camera::Camera()
+Camera::Camera() : Moveable()
 {
-    //ctor
+
 }
 
 Camera::~Camera()

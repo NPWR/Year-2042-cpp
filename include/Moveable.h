@@ -3,7 +3,6 @@
 #ifndef MOVEABLE_H
 #define MOVEABLE_H
 
-
 class Moveable
 {
     public:
@@ -23,6 +22,7 @@ class Moveable
         float m_drag;
         void mov();
     private:
+
 };
 
 #endif // MOVEABLE_H

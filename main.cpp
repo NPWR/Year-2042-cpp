@@ -1,14 +1,20 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "Camera.h"
+#include <cstdlib>
+
+#include "Scene.h"
 
 using namespace sf;
 
 int main()
 {
-    RenderWindow app(VideoMode(1024,500,32),"Hello !");
+    RenderWindow app(VideoMode(1024,512,32),"Hello !");
     app.setFramerateLimit(60);
     app.setVerticalSyncEnabled(true);
+
+    Scene WORLD;
+    WORLD.newCamera();
+    WORLD.newBackground(10,15);
 
     while (app.isOpen())
     {
@@ -21,7 +27,7 @@ int main()
             }
         }
     app.clear();
-
+    WORLD.draw(&app);
     app.display();
     }
 }
