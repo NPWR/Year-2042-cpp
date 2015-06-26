@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add option="-DSFML_DYNAMIC" />
 					<Add directory="bin/Debug/include" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-lsfml-audio-d" />
@@ -37,6 +38,7 @@
 					<Add option="-O2" />
 					<Add option="-DSFML_DYNAMIC" />
 					<Add directory="bin/Release/include" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -62,7 +64,11 @@
 			<Add library="sfml-window" />
 			<Add library="sfml-system" />
 		</Linker>
+		<Unit filename="include/Camera.h" />
+		<Unit filename="include/Moveable.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/Moveable.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
