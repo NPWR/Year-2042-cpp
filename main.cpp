@@ -14,8 +14,8 @@ int main()
 
     Scene WORLD;
     WORLD.newCamera();
+    WORLD.getCam()->setDrag(0.95);
     WORLD.newBackground(10,15);
-    WORLD.getCam()->addMov(300,300);
 
     while (app.isOpen())
     {
@@ -25,6 +25,25 @@ int main()
             if (event.type == Event::Closed)
             {
                 app.close();
+            }
+            if (event.type == Event::KeyPressed)
+            {
+                if (event.key.code == Keyboard::Up)
+                {
+                    WORLD.getCam()->addMov(0,-5);
+                }
+                if (event.key.code == Keyboard::Down)
+                {
+                    WORLD.getCam()->addMov(0,5);
+                }
+                if (event.key.code == Keyboard::Left)
+                {
+                    WORLD.getCam()->addMov(-5,0);
+                }
+                if (event.key.code == Keyboard::Right)
+                {
+                    WORLD.getCam()->addMov(5,0);
+                }
             }
         }
     app.clear();

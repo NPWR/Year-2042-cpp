@@ -36,6 +36,16 @@ void Background::draw(sf::RenderWindow* app, sf::Vector2f campos)
             float dfac = (i*i)+1;
             nsp.x = sp.x - ((int)campos.x % 1024)/dfac;
             nsp.y = sp.y - ((int)campos.y % 512)/dfac;
+            if (nsp.x < 0)
+            {
+                nsp.x += 1024;
+            }
+            if (nsp.y < 0)
+            {
+                nsp.y += 512;
+            }
+
+
             int alph = 255 - 255*i/m_depth;
 
             sf::CircleShape crc(2);
