@@ -8,14 +8,14 @@ using namespace sf;
 
 int main()
 {
-    RenderWindow app(VideoMode(1024,512,32),"Hello !");
+    RenderWindow app(VideoMode(1368,768,32),"Hello !",Style::Fullscreen);
     app.setFramerateLimit(60);
     app.setVerticalSyncEnabled(true);
 
     Scene WORLD;
     WORLD.newCamera();
     WORLD.getCam()->setDrag(0.95);
-    WORLD.newBackground(10,15);
+    WORLD.newBackground(10,10);
 
     while (app.isOpen())
     {

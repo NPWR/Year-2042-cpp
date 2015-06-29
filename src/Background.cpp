@@ -1,6 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include "Background.h"
 #include <random>
+#define EUCMOD(a, b)  (a < 0 ? (((a % b) + b) % b) : (a % b))
+
+sf::VideoMode windowdevice = sf::VideoMode::getDesktopMode();
+int W = windowdevice.width;
+int H = windowdevice.height;
 
 Background::Background(int dpt, int dens)
 {
@@ -12,8 +17,8 @@ Background::Background(int dpt, int dens)
         m_stars.push_back(new std::vector<sf::Vector2f>);
         for(int star = 0; star<dens; star++)
         {
-            float x = rand()%1024;
-            float y = rand()%512;
+            float x = rand()%W;
+            float y = rand()%H;
             m_stars[plan]->push_back(sf::Vector2f(x,y));
         }
     }
@@ -28,25 +33,17 @@ void Background::draw(sf::RenderWindow* app, sf::Vector2f campos)
 {
     for (int i = 0; i < m_stars.size(); i++ )
     {
+        std::vector<sf::Vector2f> *vec = m_stars[i];
+        float dmod = (i*i)+1;
+        int alph = 255 - 255*i/m_depth;
+
         for (int j = 0; j < m_stars[i]->size(); j++)
         {
-            std::vector<sf::Vector2f> *vec = m_stars[i];
             sf::Vector2f sp = vec->at(j);
             sf::Vector2f nsp;
-            float dfac = (i*i)+1;
-            nsp.x = sp.x - ((int)campos.x % 1024)/dfac;
-            nsp.y = sp.y - ((int)campos.y % 512)/dfac;
-            if (nsp.x < 0)
-            {
-                nsp.x += 1024;
-            }
-            if (nsp.y < 0)
-            {
-                nsp.y += 512;
-            }
 
-
-            int alph = 255 - 255*i/m_depth;
+            nsp.x = EUCMOD((int)(sp.x - campos.x/dmod),W);
+            nsp.y = EUCMOD((int)(sp.y - campos.y/dmod),H);
 
             sf::CircleShape crc(2);
             crc.setFillColor(sf::Color(255,255,255,alph));
