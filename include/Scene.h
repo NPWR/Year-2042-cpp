@@ -3,6 +3,7 @@
 
 #include "Camera.h"
 #include "Background.h"
+#include "Spaceship.h"
 
 #include <SFML/Graphics.hpp>
 
@@ -15,6 +16,8 @@ class Scene
         void newCamera();
         Camera *getCam();
         void newBackground(int,int);
+        void newPlayer();
+        Spaceship *getPlayer();
         void draw(sf::RenderWindow*);
         void actuate();
 
@@ -22,6 +25,8 @@ class Scene
     private:
         Camera *m_cam;
         Background *m_bg;
+        Spaceship *m_player;
+
 };
 
 #endif // SCENE_H

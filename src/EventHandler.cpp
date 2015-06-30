@@ -1,6 +1,8 @@
 #include "EventHandler.h"
 #include "Scene.h"
 
+float movementSpd = 1.0;
+
 EventHandler::EventHandler(sf::RenderWindow* app, Scene* wrld)
 {
     m_WORLD = wrld;
@@ -67,18 +69,18 @@ void EventHandler::actEvent()
 {
     if (m_keys.up)
     {
-        m_WORLD->getCam()->addMov(0,-2);
+        m_WORLD->getPlayer()->addMov(0,-movementSpd);
     }
     if (m_keys.down)
     {
-        m_WORLD->getCam()->addMov(0,2);
+        m_WORLD->getPlayer()->addMov(0,movementSpd);
     }
     if (m_keys.left)
     {
-        m_WORLD->getCam()->addMov(-2,0);
+        m_WORLD->getPlayer()->addMov(-movementSpd,0);
     }
     if (m_keys.right)
     {
-        m_WORLD->getCam()->addMov(2,0);
+        m_WORLD->getPlayer()->addMov(movementSpd,0);
     }
 }

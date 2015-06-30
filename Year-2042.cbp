@@ -66,13 +66,17 @@
 		</Linker>
 		<Unit filename="include/Background.h" />
 		<Unit filename="include/Camera.h" />
+		<Unit filename="include/EventHandler.h" />
 		<Unit filename="include/Moveable.h" />
 		<Unit filename="include/Scene.h" />
+		<Unit filename="include/Spaceship.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Background.cpp" />
 		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/EventHandler.cpp" />
 		<Unit filename="src/Moveable.cpp" />
 		<Unit filename="src/Scene.cpp" />
+		<Unit filename="src/Spaceship.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

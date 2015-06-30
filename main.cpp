@@ -9,7 +9,7 @@ using namespace sf;
 
 int main()
 {
-    RenderWindow app(VideoMode(1368,768,32),"Hello !",Style::Fullscreen);
+    RenderWindow app(VideoMode(1360,768,32),"Hello !",Style::Fullscreen);
     app.setFramerateLimit(60);
     app.setVerticalSyncEnabled(true);
 
@@ -17,6 +17,7 @@ int main()
     WORLD.newCamera();
     WORLD.getCam()->setDrag(0.95);
     WORLD.newBackground(10,10);
+    WORLD.newPlayer();
 
     EventHandler evHand(&app, &WORLD);
 
@@ -30,6 +31,7 @@ int main()
     app.clear();
     evHand.actEvent();
     WORLD.actuate();
+    WORLD.getCam()->follow(WORLD.getPlayer());
     WORLD.draw(&app);
     app.display();
     }
