@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1435590719 source:c:\users\elliot\documents\softs\prog\c++\year-2042\main.cpp
+1435658399 source:c:\users\elliot\documents\softs\prog\c++\year-2042\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<cstdlib>
 	"Scene.h"
+	"EventHandler.h"
 
 1434276333 c:\users\elliot\documents\softs\prog\c++\year-2042\bin\debug\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -412,4 +413,12 @@
 	<SFML/Graphics.hpp>
 	"Background.h"
 	<random>
+
+1435658340 c:\users\elliot\documents\softs\prog\c++\year-2042\include\eventhandler.h
+	<SFML/Graphics.hpp>
+	"Scene.h"
+
+1435658280 source:c:\users\elliot\documents\softs\prog\c++\year-2042\src\eventhandler.cpp
+	"EventHandler.h"
+	"Scene.h"
 

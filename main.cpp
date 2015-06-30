@@ -3,6 +3,7 @@
 #include <cstdlib>
 
 #include "Scene.h"
+#include "EventHandler.h"
 
 using namespace sf;
 
@@ -17,36 +18,17 @@ int main()
     WORLD.getCam()->setDrag(0.95);
     WORLD.newBackground(10,10);
 
+    EventHandler evHand(&app, &WORLD);
+
     while (app.isOpen())
     {
         Event event;
         while (app.pollEvent(event))
         {
-            if (event.type == Event::Closed)
-            {
-                app.close();
-            }
-            if (event.type == Event::KeyPressed)
-            {
-                if (event.key.code == Keyboard::Up)
-                {
-                    WORLD.getCam()->addMov(0,-5);
-                }
-                if (event.key.code == Keyboard::Down)
-                {
-                    WORLD.getCam()->addMov(0,5);
-                }
-                if (event.key.code == Keyboard::Left)
-                {
-                    WORLD.getCam()->addMov(-5,0);
-                }
-                if (event.key.code == Keyboard::Right)
-                {
-                    WORLD.getCam()->addMov(5,0);
-                }
-            }
+            evHand.handleEvent(event);
         }
     app.clear();
+    evHand.actEvent();
     WORLD.actuate();
     WORLD.draw(&app);
     app.display();
