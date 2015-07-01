@@ -818,10 +818,10 @@
 	<Moveable.h>
 	"Spaceship.h"
 
-1435314341 c:\c++\year-2042\include\moveable.h
+1435754969 c:\c++\year-2042\include\moveable.h
 	<SFML/Graphics.hpp>
 
-1435314411 source:c:\c++\year-2042\src\moveable.cpp
+1435755220 source:c:\c++\year-2042\src\moveable.cpp
 	"Moveable.h"
 
 1435669116 source:c:\c++\year-2042\src\scene.cpp
@@ -850,11 +850,12 @@
 	"EventHandler.h"
 	"Scene.h"
 
-1435668402 c:\c++\year-2042\include\spaceship.h
+1435755062 c:\c++\year-2042\include\spaceship.h
 	"Moveable.h"
 	<SFML/Graphics.hpp>
 
-1435669581 source:c:\c++\year-2042\src\spaceship.cpp
+1435755185 source:c:\c++\year-2042\src\spaceship.cpp
 	"Spaceship.h"
 	<SFML/Graphics.hpp>
+	<cmath>
 

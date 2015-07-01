@@ -7,6 +7,7 @@ Moveable::Moveable()
     m_dx = 0;
     m_dy = 0;
     m_drag = 0;
+    m_angle = 0;
 }
 
 Moveable::~Moveable()
@@ -17,6 +18,7 @@ Moveable::~Moveable()
 void Moveable::actuate()
 {
     mov();
+    spdToAng(m_dx,m_dy);
 }
 
 void Moveable::mov()
@@ -46,4 +48,9 @@ sf::Vector2f Moveable::getPos()
 sf::Vector2f Moveable::getSpeed()
 {
     return sf::Vector2f(m_dx,m_dy);
+}
+
+void Moveable::spdToAng(float dx, float dy)
+{
+    m_angle = atan2(dy,dx) + 3.1495;
 }
