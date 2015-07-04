@@ -850,12 +850,22 @@
 	"EventHandler.h"
 	"Scene.h"
 
-1435755062 c:\c++\year-2042\include\spaceship.h
+1435915893 c:\c++\year-2042\include\spaceship.h
 	"Moveable.h"
+	"ParticleSystem.h"
 	<SFML/Graphics.hpp>
 
-1435755185 source:c:\c++\year-2042\src\spaceship.cpp
+1435924824 source:c:\c++\year-2042\src\spaceship.cpp
 	"Spaceship.h"
 	<SFML/Graphics.hpp>
 	<cmath>
+	"ParticleSystem.h"
+
+1435925231 c:\c++\year-2042\include\particlesystem.h
+	<SFML/Graphics.hpp>
+	<unordered_map>
+	<string>
+
+1435915568 source:c:\c++\year-2042\src\particlesystem.cpp
+	"ParticleSystem.h"
 
