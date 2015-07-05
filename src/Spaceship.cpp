@@ -17,6 +17,11 @@ Spaceship::~Spaceship()
 
 void Spaceship::draw(sf::RenderWindow *app, sf::Vector2f cp)
 {
+    float mang = atan2(m_dy,m_dx);
+    float pmx = cos(mang)*30;
+    float pmy = sin(mang)*30;
+    m_mainRocketParticles->actuate(sf::Vector2f(m_x,m_y),sf::Vector2f(m_dx,m_dy),sf::Vector2f(pmx,pmy),3.1459/6);
+
     sf::Vector2f dp(m_x - cp.x, m_y - cp.y);
 
     sf::CircleShape rear(4);
@@ -51,4 +56,5 @@ void Spaceship::draw(sf::RenderWindow *app, sf::Vector2f cp)
     bodyCircle.setOutlineThickness(1);
 
     app->draw(bodyCircle);
+    m_mainRocketParticles->draw(app,cp);
 }

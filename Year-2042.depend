@@ -855,7 +855,7 @@
 	"ParticleSystem.h"
 	<SFML/Graphics.hpp>
 
-1435924824 source:c:\c++\year-2042\src\spaceship.cpp
+1436028125 source:c:\c++\year-2042\src\spaceship.cpp
 	"Spaceship.h"
 	<SFML/Graphics.hpp>
 	<cmath>
@@ -866,6 +866,11 @@
 	<unordered_map>
 	<string>
 
-1435915568 source:c:\c++\year-2042\src\particlesystem.cpp
+1436031091 source:c:\c++\year-2042\src\particlesystem.cpp
 	"ParticleSystem.h"
+	<string>
+	<unordered_map>
+	<random>
+	<ctime>
+	<cmath>
 
