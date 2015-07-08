@@ -15,6 +15,7 @@ class ParticleSystem
         void stop();
         void actuate(sf::Vector2f,sf::Vector2f, sf::Vector2f, float);
         void draw(sf::RenderWindow*, sf::Vector2f);
+        int m_particleNumber;
     protected:
     private:
         sf::Color m_colorBase;

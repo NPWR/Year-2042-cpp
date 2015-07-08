@@ -7,7 +7,8 @@
 Spaceship::Spaceship() : Moveable()
 {
     setDrag(0.95);
-    ParticleSystem m_mainRocketParticles(sf::Color(0,255,255),sf::Color(20,20,20),10,5,2,5);
+    m_mainRocketParticles = new ParticleSystem(sf::Color(0,255,255),sf::Color(20,20,20),10,5,2,5);
+    m_mainRocketParticles->start(10,10);
 }
 
 Spaceship::~Spaceship()

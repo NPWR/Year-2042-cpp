@@ -11,7 +11,7 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="include\ParticleSystem.h" open="1" top="0" tabpos="8">
-		<Cursor position="0" topLine="0" />
+		<Cursor position="862" topLine="1" />
 	</File>
 	<File name="include\Scene.h" open="1" top="0" tabpos="2">
 		<Cursor position="0" topLine="0" />
@@ -20,7 +20,7 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="754" topLine="2" />
+		<Cursor position="483" topLine="2" />
 	</File>
 	<File name="src\Background.cpp" open="0" top="0" tabpos="7">
 		<Cursor position="0" topLine="0" />
@@ -34,13 +34,13 @@
 	<File name="src\Moveable.cpp" open="1" top="0" tabpos="7">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\ParticleSystem.cpp" open="1" top="1" tabpos="9">
-		<Cursor position="2353" topLine="75" />
+	<File name="src\ParticleSystem.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="1317" topLine="88" />
 	</File>
 	<File name="src\Scene.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="595" topLine="23" />
+		<Cursor position="595" topLine="0" />
 	</File>
-	<File name="src\Spaceship.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="472" topLine="19" />
+	<File name="src\Spaceship.cpp" open="1" top="1" tabpos="4">
+		<Cursor position="303" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

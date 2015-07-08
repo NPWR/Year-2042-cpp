@@ -20,6 +20,7 @@ ParticleSystem::ParticleSystem(sf::Color color, sf::Color colorrange, float medL
     m_stopTime = 0;
     m_spawnRate = 0;
     m_drag = 1.0;
+    m_particleNumber = 0;
     srand(time(NULL));
 
 }
@@ -61,8 +62,8 @@ void ParticleSystem::stop()
 void ParticleSystem::actuate(sf::Vector2f opos, sf::Vector2f omov, sf::Vector2f pmov, float spread)
 {
     std::vector<int> toDelIndexes;
-
-    for ( int i = 0; i < m_particles.size(); i++ )
+    int i = 0;
+    for ( ; i < m_particleNumber; i++ )
     {
         //Move particles and select old ones
         std::unordered_map<std::string,float>* particle = m_particles.at(i);
@@ -104,6 +105,7 @@ void ParticleSystem::actuate(sf::Vector2f opos, sf::Vector2f omov, sf::Vector2f 
         //Spawn new particles
         for ( int i = 0; i < m_spawnRate; i++)
         {
+            m_particleNumber++;
             int r = rand()%((m_colorBase.r + m_colorRange.r) - (m_colorBase.r - m_colorRange.r)) + (m_colorBase.r - m_colorRange.r);
             int g = rand()%((m_colorBase.g + m_colorRange.g) - (m_colorBase.g - m_colorRange.g)) + (m_colorBase.g - m_colorRange.g);
             int b = rand()%((m_colorBase.b + m_colorRange.b) - (m_colorBase.b - m_colorRange.b)) + (m_colorBase.b - m_colorRange.b);
